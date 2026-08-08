@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Services | InkFlowzPrt Print Shop</title>
+    <meta name="description"
+        content="Explore our high-quality printing services. From custom business visiting cards and banners to brochures, flyers, textbooks, and office stationery.">
+    <meta name="keywords"
+        content="business cards print, vinyl banners, flyers printing, brochures, bookstore, copy center products, xerox options">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('rtl') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Flavors Hero -->
+    <section class="hero-section text-center text-white position-relative"
+        style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;">
+
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-3 fw-bold mb-4 font-heading fade-in-up">InkFlowzPrt. <span class="text-primary-custom"
+                    style="color: var(--primary-color) !important;">Products</span></h1>
+            <p class="lead mb-0 fade-in-up">Top-tier digital copy, banners, and stationery crafted for your business.</p>
+        </div>
+        <div class="hero-divider hero-divider-pink"></div>
+    </section>
+
+    <!-- Page Header & Filters -->
+    <section class="section-padding bg-light pb-0">
+        <div class="container text-center">
+            <div class="section-title mb-4">
+                <h2 class="display-5 font-heading" style="color: var(--primary-color);"><i class="fas fa-search me-2"></i> Explore InkFlowzPrt. Services</h2>
+                <p class="lead fw-bold mb-2">High-speed digital printing & quality copy services</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+                <button class="btn btn-outline-danger filter-btn active px-4 rounded-pill" data-filter="all">
+                    <i class="fas fa-border-all me-1"></i> All Products
+                </button>
+                <button class="btn btn-outline-danger filter-btn px-4 rounded-pill" data-filter="business">
+                    <i class="fas fa-briefcase me-1"></i> Business Printing
+                </button>
+                <button class="btn btn-outline-danger filter-btn px-4 rounded-pill" data-filter="marketing">
+                    <i class="fas fa-bullhorn me-1"></i> Marketing Items
+                </button>
+                <button class="btn btn-outline-danger filter-btn px-4 rounded-pill" data-filter="stationery">
+                    <i class="fas fa-book me-1"></i> Books & Stationery
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavor Cards Grid -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row g-4" id="flavor-grid">
+                <!-- Classic Vanilla -->
+                <div class="col-md-4 flavor-card" data-category="business">
+                    <div class="ice-cream-card position-relative overflow-hidden card-h-100">
+                        <img src="img/visiting_cards.png"
+                            alt="Visiting Cards" class="scoop-trigger" style="cursor: pointer; height: 250px; object-fit: cover; width: 100%;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Visiting Cards</h4>
+                            <p class="text-muted">Standard dimensions, premium weight cardstock, double-sided with matte or gloss lamination options.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Belgian Chocolate -->
+                <div class="col-md-4 flavor-card" data-category="business">
+                    <div class="ice-cream-card position-relative overflow-hidden card-h-100">
+                        <img src="img/vinyl_banners.png"
+                            alt="Banners" class="scoop-trigger" style="cursor: pointer; height: 250px; object-fit: cover; width: 100%;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Vinyl Banners</h4>
+                            <p class="text-muted">Heavy-duty weather-proof vinyl signs for events, festivals, and stores. Precision grommet placement.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Coral Strawberry -->
+                <div class="col-md-4 flavor-card" data-category="marketing">
+                    <div class="ice-cream-card position-relative overflow-hidden card-h-100">
+                        <img src="img/marketing_flyers.png"
+                            alt="Flyers" class="scoop-trigger" style="cursor: pointer; height: 250px; object-fit: cover; width: 100%;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Marketing Flyers</h4>
+                            <p class="text-muted">High-density colors, A4 or A5 sizes, perfect for handouts, menus, and promotions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vegan Coconut Mint -->
+                <div class="col-md-4 flavor-card" data-category="marketing">
+                    <div class="ice-cream-card position-relative overflow-hidden card-h-100">
+                        <img src="img/folded_brochures.png"
+                            alt="Brochures" class="scoop-trigger" style="cursor: pointer; height: 250px; object-fit: cover; width: 100%;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Folded Brochures</h4>
+                            <p class="text-muted">Tri-fold, Z-fold, or bi-fold marketing layouts on thick paper stock with automated creasing.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Salted Caramel -->
+                <div class="col-md-4 flavor-card" data-category="stationery">
+                    <div class="ice-cream-card position-relative overflow-hidden card-h-100">
+                        <img src="img/book_printing.png"
+                            alt="Books" class="scoop-trigger" style="cursor: pointer; height: 250px; object-fit: cover; width: 100%;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Book & Notebook Printing</h4>
+                            <p class="text-muted">Custom textbooks, novels, and notebooks. Binding: spiral, wire-o, or perfect paperback binding.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Mango Sorbet -->
+                <div class="col-md-4 flavor-card" data-category="stationery">
+                    <div class="ice-cream-card position-relative overflow-hidden card-h-100">
+                        <img src="img/xerox_copy.png"
+                            alt="Xerox" class="scoop-trigger" style="cursor: pointer; height: 250px; object-fit: cover; width: 100%;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h4 class="card-title">Photocopying & Xerox</h4>
+                            <p class="text-muted">High-volume black-and-white double-sided document copy. Rapid turnaround.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Customer Favorites -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="display-5 font-heading mb-5" style="color: var(--primary-color);"><i class="fas fa-award me-2 text-warning"></i> Customer Favorites</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="ice-cream-card border-0 shadow-sm position-relative overflow-hidden card-h-100">
+                        <img src="img/visiting_cards.png"
+                            class="card-img-top scoop-trigger" alt="Most Popular" style="cursor: pointer; height: 250px; object-fit: cover;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Most Popular</h5>
+                            <p class="text-muted small">Standard matte-finish business cards for teams.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ice-cream-card border-0 shadow-sm position-relative overflow-hidden card-h-100">
+                        <img src="img/printing_materials.png"
+                            class="card-img-top scoop-trigger" alt="Designer Special" style="cursor: pointer; height: 250px; object-fit: cover;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Special Finishes</h5>
+                            <p class="text-muted small">Spot UV highlights and embossed lettering for cards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ice-cream-card border-0 shadow-sm position-relative overflow-hidden card-h-100">
+                        <img src="img/vinyl_banners.png"
+                            class="card-img-top scoop-trigger" alt="Seasonal Hit" style="cursor: pointer; height: 250px; object-fit: cover;">
+                        <div class="pour-container"></div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Large Signage</h5>
+                            <p class="text-muted small">Glossy event poster boards and hanging shop banners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Ingredients CTA -->
+    <section class="section-padding text-white text-center"
+        style="background: linear-gradient(rgba(0, 102, 204, 0.9), rgba(0, 102, 204, 0.9)), url('https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;">
+        <div class="container">
+            <h2 class="display-5 font-heading mb-4"><i class="fas fa-file-alt me-2"></i> Premium Paper Stocks & Finishes</h2>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <div class="d-flex flex-wrap justify-content-center gap-4 lead">
+                        <span class="d-flex align-items-center"><i class="fas fa-check-circle me-2"></i> Standard & premium GSM</span>
+                        <span class="d-flex align-items-center"><i class="fas fa-check-circle me-2"></i> Matte, Gloss & Textured</span>
+                        <span class="d-flex align-items-center"><i class="fas fa-check-circle me-2"></i> Environmentally friendly</span>
+                    </div>
+                </div>
+            </div>
+            <a href="specifications.html"
+                class="btn btn-lg btn-light text-primary fw-bold px-5 rounded-pill shadow icon-bounce">
+                <i class="fas fa-eye me-2"></i> View Material Specs
+            </a>
+        </div>
+    </section>
+    </div>
+    </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Common Components JS -->
+    <script src="js/loader.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

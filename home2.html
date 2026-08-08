@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Prints | InkFlowzPrt Print Shop</title>
+    <meta name="description"
+        content="Discover high-quality printing, copy center services, stationery products, and books at InkFlowzPrt. Browse our custom layouts and digital printing solutions.">
+    <meta name="keywords"
+        content="print shop, copy center, xerox copies, digital printing, brochures, visiting cards, stationery products, book printing, custom layout, banner prints">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        if (localStorage.getItem('rtl') === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    </script>
+    <style>
+        .split-hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-left {
+            padding: 100px 50px;
+        }
+
+        .hero-right {
+            background: url('https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1200&auto=format&fit=crop') center/cover;
+            height: 100%;
+            min-height: 60vh;
+            border-radius: 0 0 0 150px;
+        }
+
+        .flavor-slider-container {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f4f7f6 100%);
+        }
+
+        .carousel-item-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .slider-img {
+            max-width: 400px;
+            border-radius: 50px;
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        }
+
+        .visit-us-section {
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 100px 100px 0 0;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+
+    <!-- 1. Glassmorphism Hero -->
+    <section
+        class="hero-section text-center text-white position-relative d-flex align-items-center justify-content-center"
+        style="background: url('https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1920&auto=format&fit=crop') center/cover; min-height: 75vh; padding: 60px 0 20px 0;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay-dark"></div>
+        <div class="container position-relative z-1 py-0">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="glass-hero-card p-4 rounded-5 shadow-lg mx-auto d-flex flex-column align-items-center"
+                        style="max-width: 800px;">
+                        <span class="badge bg-primary text-white mb-2 px-3 py-2 rounded-pill fw-bold shadow-sm"
+                            style="letter-spacing: 1px;">FAST TURNAROUND TIMES</span>
+                        <h1 class="display-4 fw-bold mb-3 font-heading text-white"
+                            style="text-shadow: 2px 2px 6px rgba(0,0,0,0.5);">Get Your<br><span
+                                class="text-primary px-3 rounded-3 d-inline-block"
+                                style="background: var(--white); text-shadow: none;">Perfect Print</span></h1>
+                        <p class="lead mb-3 text-white fw-bold mx-auto"
+                            style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6); max-width: 600px; font-size: 1.15rem;">High-speed digital photocopying, custom book binding, business cards, and office stationery. Handled by copy experts every single day. Fast & Precise.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="services.html"
+                                class="btn btn-primary-custom btn-lg shadow-lg px-4 pulse-animation">Explore Products</a>
+                            <a href="pricing.html"
+                                class="btn btn-light btn-lg rounded-pill px-4 shadow text-dark fw-bold">Full Pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Curved Divider -->
+        <div class="hero-divider hero-divider-pink" style="z-index: 20;"></div>
+    </section>
+
+    <!-- 2. Quick Bites (Categories) -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <div class="section-title mb-5">
+                <h2 class="display-5 font-heading" style="color: var(--primary-color);">Pick Your Product</h2>
+                <p class="lead text-muted">Most ordered prints in the city</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-6 text-center">
+                    <div class="p-4 rounded-5 shadow-sm border-0 bg-white h-100 hover-up transition-all">
+                        <div class="ratio ratio-1x1 mb-3 mx-auto" style="width: 120px;">
+                            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=200&auto=format&fit=crop"
+                                class="img-fluid rounded-circle scoop-trigger" alt="Business Cards" style="cursor: pointer;">
+                        </div>
+                        <h5 class="fw-bold">Business Cards</h5>
+                        <p class="text-muted small">Standard matte / gloss</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="p-4 rounded-5 shadow-sm border-0 bg-white h-100 hover-up transition-all">
+                        <div class="ratio ratio-1x1 mb-3 mx-auto" style="width: 120px;">
+                            <img src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?q=80&w=200&auto=format&fit=crop"
+                                class="img-fluid rounded-circle scoop-trigger" alt="Banners"
+                                style="cursor: pointer;">
+                        </div>
+                        <h5 class="fw-bold">Vinyl Banners</h5>
+                        <p class="text-muted small">Wide-format prints</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="p-4 rounded-5 shadow-sm border-0 bg-white h-100 hover-up transition-all">
+                        <div class="ratio ratio-1x1 mb-3 mx-auto" style="width: 120px;">
+                            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=200&auto=format&fit=crop"
+                                class="img-fluid rounded-circle scoop-trigger" alt="Brochures" style="cursor: pointer;">
+                        </div>
+                        <h5 class="fw-bold">Brochures & Flyers</h5>
+                        <p class="text-muted small">Multi-page brochures</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="p-4 rounded-5 shadow-sm border-0 bg-white h-100 hover-up transition-all">
+                        <div class="ratio ratio-1x1 mb-3 mx-auto" style="width: 120px;">
+                            <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=200&auto=format&fit=crop"
+                                class="img-fluid rounded-circle scoop-trigger" alt="Stationery" style="cursor: pointer;">
+                        </div>
+                        <h5 class="fw-bold">Custom Stationery</h5>
+                        <p class="text-muted small">Envelopes & notebooks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Colorful Flavor Grid -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <div class="section-title mb-5">
+                <h2 class="display-5 font-heading" style="color: var(--primary-color);">Our Top Sellers</h2>
+                <p class="lead text-muted">The highest-quality digital prints in high demand</p>
+            </div>
+            <div class="row g-5 align-items-stretch">
+                <!-- Flavor 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div
+                        class="card border-0 rounded-5 shadow-sm h-100 hover-up bg-white overflow-hidden d-flex flex-column">
+                        <img src="img/home2_visiting_cards.png"
+                            class="card-img-top" alt="Visiting Cards" style="height: 220px; object-fit: cover;">
+                        <div class="card-body p-4 text-center mt-n4 position-relative z-1 d-flex flex-column">
+                            <div><span class="badge bg-success text-white rounded-pill px-3 py-2 mb-3 shadow-sm">From $0.10 / Card</span></div>
+                            <h3 class="fw-bold font-heading mb-3">Premium Business Cards</h3>
+                            <p class="text-muted mb-4 flex-grow-1">Choose between gloss finish, silk lamination, rounded corners, or spot UV overlay. Make your brand memorable.</p>
+                            <a href="services.html" class="text-primary try-btn px-4 mt-auto">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flavor 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div
+                        class="card border-0 rounded-5 shadow-sm h-100 hover-up bg-white overflow-hidden d-flex flex-column">
+                        <img src="img/home2_vinyl_banners.png"
+                            class="card-img-top" alt="Banners" style="height: 220px; object-fit: cover;">
+                        <div class="card-body p-4 text-center mt-n4 position-relative z-1 d-flex flex-column">
+                            <div><span class="badge bg-info text-white rounded-pill px-3 py-2 mb-3 shadow-sm">From $15.00</span></div>
+                            <h3 class="fw-bold font-heading mb-3">Outdoor Vinyl Banners</h3>
+                            <p class="text-muted mb-4 flex-grow-1">High-resistance outdoor vinyl material with copper grommets for easy hanging. Custom length up to 50 feet.</p>
+                            <a href="services.html" class="text-primary try-btn px-4 mt-auto">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flavor 3 -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div
+                        class="card border-0 rounded-5 shadow-sm h-100 hover-up bg-white overflow-hidden d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=600&auto=format&fit=crop"
+                            class="card-img-top" alt="Brochures" style="height: 220px; object-fit: cover;">
+                        <div class="card-body p-4 text-center mt-n4 position-relative z-1 d-flex flex-column">
+                            <div><span class="badge bg-danger text-white rounded-pill px-3 py-2 mb-3 shadow-sm">From $0.25 / Unit</span></div>
+                            <h3 class="fw-bold font-heading mb-3">Tri-Fold Brochures</h3>
+                            <p class="text-muted mb-4 flex-grow-1">A4 or letter sizes, tri-folded with precise machine creasing. Perfect for handouts, manuals, and lists.</p>
+                            <a href="services.html" class="text-primary try-btn px-4 mt-auto">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Modern Catering Teaser -->
+    <section class="section-padding py-0">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <div
+                        style="background: url('https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1200&auto=format&fit=crop') center/cover; min-height: 500px; height: 100%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center event-catering-section"
+                    style="border-left: 2px solid rgba(0, 102, 204, 0.1);">
+                    <div class="p-5 p-xl-6">
+                        <span
+                            class="badge bg-white text-danger mb-3 px-3 py-2 rounded-pill fw-bold shadow-sm border border-danger border-opacity-10">BULK
+                            PRINTS</span>
+                        <h2 class="display-5 font-heading mb-4">Corporate & Volume Discounts</h2>
+                        <p class="lead mb-5 fw-normal" style="max-width: 500px;">Save big with bulk orders. Ideal for schools ordering textbooks, corporations demanding folders and business stationery, and event planners printing large banner signs.</p>
+                        <a href="bulk-orders.html" class="btn btn-primary-custom btn-lg px-5 rounded-pill shadow">Quote Bulk Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Sweet Words (Testimonials) -->
+    <section class="section-padding sweet-words-section">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-5 font-heading" style="color: var(--primary-color);">Happy Clients</h2>
+                <p class="lead text-muted">What local businesses and authors are saying about InkFlowzPrt!</p>
+            </div>
+            <div class="row g-4 justify-content-center d-flex align-items-stretch">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-4 bg-white shadow-sm hover-up h-100 position-relative d-flex flex-column justify-content-between"
+                        style="border-radius: 30px 30px 30px 5px; border: 1px solid rgba(0, 102, 204, 0.1);">
+                        <div>
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="fst-italic mb-4 fs-5">"Excellent print quality! The Spot UV visiting cards are beautiful. Uploading files on the portal is simple."</p>
+                        </div>
+                        <div class="mt-auto">
+                            <hr class="text-muted" style="opacity: 0.1;">
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+                                    alt="Emily" class="rounded-circle shadow-sm"
+                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                <div class="ms-3 text-start">
+                                    <h6 class="fw-bold mb-0">Emily R.</h6>
+                                    <small class="text-muted">Marketing Director</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-4 bg-white shadow-sm hover-up h-100 position-relative d-flex flex-column justify-content-between"
+                        style="border-radius: 30px 30px 30px 5px; border: 1px solid rgba(0, 102, 204, 0.1);">
+                        <div>
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="fst-italic mb-4 fs-5">"We printed 500 copies of our school textbook. Excellent spiral binding and quick turnaround. Highly recommended."</p>
+                        </div>
+                        <div class="mt-auto">
+                            <hr class="text-muted" style="opacity: 0.1;">
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=150&auto=format&fit=crop"
+                                    alt="James" class="rounded-circle shadow-sm"
+                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                <div class="ms-3 text-start">
+                                    <h6 class="fw-bold mb-0">Principal James</h6>
+                                    <small class="text-muted">School Head</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-4 bg-white shadow-sm hover-up h-100 position-relative d-flex flex-column justify-content-between"
+                        style="border-radius: 30px 30px 30px 5px; border: 1px solid rgba(0, 102, 204, 0.1);">
+                        <div>
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="fst-italic mb-4 fs-5">"The drag-and-drop file upload is very fast. Being able to reorder past poster printings without re-uploading saves me a lot of time!"</p>
+                        </div>
+                        <div class="mt-auto">
+                            <hr class="text-muted" style="opacity: 0.1;">
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                                    alt="David" class="rounded-circle shadow-sm"
+                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                <div class="ms-3 text-start">
+                                    <h6 class="fw-bold mb-0">David L.</h6>
+                                    <small class="text-muted">Graphic Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Scoop Secrets (Quick FAQ) -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center mb-5">
+                        <h2 class="display-5 font-heading" style="color: var(--primary-color);">Printing FAQ</h2>
+                    </div>
+                        <div class="accordion accordion-flush rounded-5 overflow-hidden shadow-sm" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What file formats do you accept?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">We recommend high-resolution PDF files. We also support PNG, JPG, and ZIP files.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Can I order a sample print?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">Yes! You can request a single proof print via our Client Portal to verify color and alignment before approving a full print run.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        How fast is your standard printing turnaround?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">Our standard turnaround is 24 to 48 hours for digital prints and copy orders. Custom books and bulk orders might take 3 to 5 business days.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        What paper stocks and finishes do you offer?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">We offer a wide variety of stocks, including matte, gloss, satin, and uncoated papers ranging from lightweight copier paper to heavy cardstock.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        Do you provide book binding services?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">Yes! We offer spiral binding, comb binding, wire-O binding, and perfect binding for custom books, brochures, and manuals.</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Instagram Social Wall -->
+    <section class="section-padding bg-white pb-5">
+        <div class="container text-center mb-5">
+            <span class="badge bg-danger text-white px-3 py-2 rounded-pill fw-bold mb-3"><i
+                    class="fab fa-instagram me-2"></i>@InkFlowzPrtPrints</span>
+            <h2 class="display-5 font-heading" style="color: var(--primary-color);">Show Us Your Prints</h2>
+            <p class="lead text-muted">Tag us with your unboxed stationery and flyers to get featured!</p>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="row g-0 flex-nowrap overflow-hidden" style="max-height: 350px;">
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=600&auto=format&fit=crop"
+                        class="img-fluid w-100 h-100 object-fit-cover hover-up transition-all" alt="Insta 1"
+                        style="min-height: 350px; cursor: pointer; filter: brightness(0.9);">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=600&auto=format&fit=crop"
+                        class="img-fluid w-100 h-100 object-fit-cover hover-up transition-all" alt="Insta 2"
+                        style="min-height: 350px; cursor: pointer; filter: brightness(0.9);">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=600&auto=format&fit=crop"
+                        class="img-fluid w-100 h-100 object-fit-cover hover-up transition-all" alt="Insta 3"
+                        style="min-height: 350px; cursor: pointer; filter: brightness(0.9);">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=600&auto=format&fit=crop"
+                        class="img-fluid w-100 h-100 object-fit-cover hover-up transition-all" alt="Insta 4"
+                        style="min-height: 350px; cursor: pointer; filter: brightness(0.9);">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 mb-4">
+            <button class="btn btn-outline-danger btn-lg rounded-pill px-5 fw-bold bg-white-override shadow-sm border-2">Follow Us</button>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Common Components JS -->
+    <script src="js/loader.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
