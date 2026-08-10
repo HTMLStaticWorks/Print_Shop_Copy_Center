@@ -32,6 +32,22 @@
     --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(2);
+}
+
+[data-theme="dark"] .btn-outline-danger {
+    color: #ff6b8b;
+    border-color: #ff6b8b;
+}
+
+[data-theme="dark"] .btn-outline-danger:hover,
+[data-theme="dark"] .btn-outline-danger.active {
+    background-color: #ff6b8b !important;
+    border-color: #ff6b8b !important;
+    color: #ffffff !important;
+}
+
 /* Global Bootstrap Overrides */
 .text-primary {
     color: var(--primary-color) !important;
@@ -270,11 +286,15 @@ h6 {
     border-bottom-color: rgba(255, 107, 107, 0.25) !important;
 }
 
-.navbar-brand {
+.navbar-brand, .auth-logo {
     font-family: var(--heading-font);
     font-size: 1.8rem;
     color: var(--primary-color) !important;
     font-weight: 800;
+    padding: 5px 0 !important;
+    line-height: 1.2;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .nav-link {

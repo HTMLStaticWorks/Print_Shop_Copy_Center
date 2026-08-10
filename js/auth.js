@@ -41,8 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedRtl = localStorage.getItem('rtl');
     if (savedRtl === 'true') {
         document.documentElement.setAttribute('dir', 'rtl');
+        if (rtlToggle) rtlToggle.textContent = 'LTR';
     } else if (savedRtl === 'false') {
         document.documentElement.setAttribute('dir', 'ltr');
+        if (rtlToggle) rtlToggle.textContent = 'RTL';
     }
 
     if (rtlToggle) {
@@ -51,9 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (dir === 'rtl') {
                 document.documentElement.setAttribute('dir', 'ltr');
                 localStorage.setItem('rtl', 'false');
+                rtlToggle.textContent = 'RTL';
             } else {
                 document.documentElement.setAttribute('dir', 'rtl');
                 localStorage.setItem('rtl', 'true');
+                rtlToggle.textContent = 'LTR';
             }
         });
     }

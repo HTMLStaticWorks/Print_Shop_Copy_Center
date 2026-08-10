@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <nav class="navbar navbar-expand-xl">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <i class="fas fa-print me-2"></i>InkFlowzPrt.
+                        <i class="fas fa-print me-2"></i> InkFlowzPrt.
                     </a>
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <i class="fas fa-bars"></i>
@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <a class="nav-link ${currentPath === 'dashboard.html' ? 'active' : ''}" href="dashboard.html">Client Portal</a>
                             </li>
                             <li class="nav-item d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                                <span id="rtl-toggle" class="nav-icon fw-bold" title="Toggle RTL" style="font-size: 0.9rem; width: 32px; display: inline-block; text-align: center;">
+                                    RTL
+                                </span>
                                 <span id="theme-toggle" class="nav-icon" title="Toggle Theme">
                                     <i class="fas fa-moon"></i>
-                                </span>
-                                <span id="rtl-toggle" class="nav-icon" title="Toggle RTL">
-                                    <i class="fas fa-left-right"></i>
                                 </span>
                             </li>
                             <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
@@ -88,13 +88,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // RTL Toggle Logic
         const rtlToggle = document.getElementById('rtl-toggle');
-        
+
         // Initialize RTL from localStorage
         const savedRtl = localStorage.getItem('rtl');
         if (savedRtl === 'true') {
             document.documentElement.setAttribute('dir', 'rtl');
+            if (rtlToggle) rtlToggle.textContent = 'LTR';
         } else if (savedRtl === 'false') {
             document.documentElement.setAttribute('dir', 'ltr');
+            if (rtlToggle) rtlToggle.textContent = 'RTL';
         }
 
         if (rtlToggle) {
@@ -103,9 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (dir === 'rtl') {
                     document.documentElement.setAttribute('dir', 'ltr');
                     localStorage.setItem('rtl', 'false');
+                    rtlToggle.textContent = 'RTL';
                 } else {
                     document.documentElement.setAttribute('dir', 'rtl');
                     localStorage.setItem('rtl', 'true');
+                    rtlToggle.textContent = 'LTR';
                 }
             });
         }

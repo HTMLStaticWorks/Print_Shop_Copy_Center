@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = `
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="row g-4">
                         <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
                             <a class="navbar-brand mb-4 d-inline-block text-decoration-none" href="index.html">
-                                <i class="fas fa-print me-2"></i>InkFlowzPrt.
+                                <i class="fas fa-print me-2"></i> InkFlowzPrt.
                             </a>
                             <p class="text-muted mb-4 small">Your one-stop destination for premium printing, stationery, books, and copy services. Experience high-quality prints and professional binding tailored to your needs.</p>
                             <div class="footer-social d-flex gap-2">
