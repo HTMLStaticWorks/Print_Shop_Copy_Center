@@ -2007,6 +2007,7 @@ h4 i.far {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: var(--shadow);
     transition: all var(--transition-speed);
+    height: 100%;
 }
 
 [data-theme="dark"] .db-metric-card {
