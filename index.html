@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="print shop, copy center, xerox, visiting cards, banner printing, flyer printing, brochure printing, custom books, stationery, printing services, corporate printing, digital copy">
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -167,9 +167,8 @@
                             class="btn btn-light text-start p-4 border-0 shadow-sm rounded-4 active-config-btn d-flex align-items-center justify-content-between transition-all"
                             style="background-color: var(--white); border-left: 5px solid var(--primary-color) !important;"
                             onclick="switchConfig('cards', this)">
-                            <div>
-                                <h5 class="fw-bold mb-1"><i class="fas fa-id-card me-2 text-primary"></i> Premium
-                                    Business Cards</h5>
+                            <div class="flex-grow-1 me-3 text-start">
+                                <h5 class="fw-bold mb-1"><i class="fas fa-id-card me-2 text-primary"></i> Premium Business Cards</h5>
                                 <p class="small text-muted mb-0">High-GSM cardstocks & custom laminates.</p>
                             </div>
                             <i class="fas fa-chevron-right text-muted"></i>
@@ -178,9 +177,8 @@
                             class="btn btn-light text-start p-4 border-0 shadow-sm rounded-4 d-flex align-items-center justify-content-between transition-all"
                             style="background-color: var(--white); border-left: 5px solid transparent;"
                             onclick="switchConfig('books', this)">
-                            <div>
-                                <h5 class="fw-bold mb-1"><i class="fas fa-book me-2 text-primary"></i> Custom Bindings &
-                                    Books</h5>
+                            <div class="flex-grow-1 me-3 text-start">
+                                <h5 class="fw-bold mb-1"><i class="fas fa-book me-2 text-primary"></i> Custom Bindings & Books</h5>
                                 <p class="small text-muted mb-0">Perfect binding, spiral coils, & hardcovers.</p>
                             </div>
                             <i class="fas fa-chevron-right text-muted"></i>
@@ -189,9 +187,8 @@
                             class="btn btn-light text-start p-4 border-0 shadow-sm rounded-4 d-flex align-items-center justify-content-between transition-all"
                             style="background-color: var(--white); border-left: 5px solid transparent;"
                             onclick="switchConfig('banners', this)">
-                            <div>
-                                <h5 class="fw-bold mb-1"><i class="fas fa-map me-2 text-primary"></i> Large Banners &
-                                    Signage</h5>
+                            <div class="flex-grow-1 me-3 text-start">
+                                <h5 class="fw-bold mb-1"><i class="fas fa-map me-2 text-primary"></i> Large Banners & Signage</h5>
                                 <p class="small text-muted mb-0">Weather-proof vinyl & high-impact storefront signs.</p>
                             </div>
                             <i class="fas fa-chevron-right text-muted"></i>
@@ -200,10 +197,19 @@
                             class="btn btn-light text-start p-4 border-0 shadow-sm rounded-4 d-flex align-items-center justify-content-between transition-all"
                             style="background-color: var(--white); border-left: 5px solid transparent;"
                             onclick="switchConfig('flyers', this)">
-                            <div>
-                                <h5 class="fw-bold mb-1"><i class="fas fa-file-invoice me-2 text-primary"></i> Marketing
-                                    Flyers & Folded Brochures</h5>
+                            <div class="flex-grow-1 me-3 text-start">
+                                <h5 class="fw-bold mb-1"><i class="fas fa-file-invoice me-2 text-primary"></i> Marketing Flyers & Folded Brochures</h5>
                                 <p class="small text-muted mb-0">High-volume trifolds, event handouts, & pamphlets.</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </button>
+                        <button
+                            class="btn btn-light text-start p-4 border-0 shadow-sm rounded-4 d-flex align-items-center justify-content-between transition-all"
+                            style="background-color: var(--white); border-left: 5px solid transparent;"
+                            onclick="switchConfig('xerox', this)">
+                            <div class="flex-grow-1 me-3 text-start">
+                                <h5 class="fw-bold mb-1"><i class="fas fa-copy me-2 text-primary"></i> Document Copy & Xerox</h5>
+                                <p class="small text-muted mb-0">High-speed B&W or color copy services.</p>
                             </div>
                             <i class="fas fa-chevron-right text-muted"></i>
                         </button>
@@ -314,15 +320,27 @@
                     spec2: '150 GSM glossy / silk papers',
                     spec3: 'Trifold, Z-fold, and Bi-fold options',
                     spec4: 'High-speed automated scoring folds'
+                },
+                xerox: {
+                    img: 'img/xerox_copy.png',
+                    badge: 'Starting from $0.05 / Page',
+                    title: 'High-Speed Copy & Document Xerox',
+                    desc: 'Rapid high-volume document copying for legal briefs, office manuals, student notes, and architectural prints with automatic collating and stapling options.',
+                    spec1: 'Fast 100+ PPM copy output',
+                    spec2: 'B&W and full-color options',
+                    spec3: 'Standard A4, A3, & Letter sizes',
+                    spec4: 'Stapled, collated, or hole-punched'
                 }
             };
 
             function switchConfig(key, element) {
-                // Update button borders
+                // Update button active state & borders
                 const buttons = document.querySelectorAll('#configurator-controls button');
                 buttons.forEach(btn => {
+                    btn.classList.remove('active-config-btn');
                     btn.style.borderLeft = '5px solid transparent';
                 });
+                element.classList.add('active-config-btn');
                 element.style.borderLeft = '5px solid var(--primary-color)';
 
                 const data = configData[key];

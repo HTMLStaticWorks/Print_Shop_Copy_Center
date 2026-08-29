@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         headerPlaceholder.innerHTML = `
             <nav class="navbar navbar-expand-xl">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <i class="fas fa-print me-2"></i> InkFlowzPrt.
+                    <a class="navbar-brand py-0" href="index.html">
+                        <img src="img/logo1.png" alt="InkFlowzPrt" class="brand-logo-img">
                     </a>
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <i class="fas fa-bars"></i>
