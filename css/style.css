@@ -2642,3 +2642,155 @@ h6 .me-1 {
     margin-right: 12px !important;
     margin-left: 12px !important;
 }
+
+/* ====================================================
+   Services Page - Button & Filter Tab Responsive Styles
+   ==================================================== */
+
+/* Filter Tab Buttons */
+.filter-tabs-container {
+    gap: 12px;
+}
+
+.filter-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 42px;
+    height: 42px;
+    padding: 8px 24px !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px !important;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(0, 102, 204, 0.3);
+}
+
+/* Card Button Group & Parity Heights */
+.card-btn-group {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px !important;
+}
+
+.btn-service-primary,
+.btn-service-outline {
+    flex: 1 1 0px !important;
+    width: 100%;
+    min-height: 42px !important;
+    height: 42px !important;
+    max-height: 42px !important;
+    padding: 8px 14px !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    border-radius: 50px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap;
+    box-sizing: border-box !important;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none !important;
+}
+
+/* Filled Primary Service Button */
+.btn-service-primary {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    border: 1.5px solid var(--primary-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
+}
+
+.btn-service-primary:hover,
+.btn-service-primary:focus,
+.btn-service-primary:active {
+    background-color: #0052a3 !important;
+    border-color: #0052a3 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.35);
+}
+
+/* Outline Service Button */
+.btn-service-outline {
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+    border: 1.5px solid var(--primary-color) !important;
+}
+
+.btn-service-outline:hover,
+.btn-service-outline:focus,
+.btn-service-outline:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.25);
+}
+
+/* Dark Mode Support for Service Buttons & Filters */
+[data-theme="dark"] .btn-service-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-service-outline {
+    color: #38bdf8 !important;
+    border-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .btn-service-outline:hover {
+    background-color: #38bdf8 !important;
+    border-color: #38bdf8 !important;
+    color: #0f172a !important;
+}
+
+[data-theme="dark"] .filter-btn {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: var(--text-dark) !important;
+}
+
+[data-theme="dark"] .filter-btn:hover,
+[data-theme="dark"] .filter-btn.active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+/* Responsive Stacking & Tab View Optimization */
+@media (max-width: 575.98px) {
+    .filter-tabs-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-btn {
+        width: 100%;
+        min-height: 44px;
+        height: auto;
+    }
+
+    .card-btn-group {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    .btn-service-primary,
+    .btn-service-outline {
+        width: 100% !important;
+        flex: none !important;
+    }
+}
